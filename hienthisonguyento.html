@@ -8,34 +8,39 @@
     <script>
 
 
-        let int = 1;
-        let N = 3;
+        let int = parseInt(prompt("Nhập số lượng số nguyên tố"));
+        let i = 1;
+        let N = 2;
         let a = 2;
-        let b = true;
-        let e = "20 nguyên tố đầu tiên là 2 ";
+        let bl = true;
+        let dpy = "nguyên tố đầu tiên là ";
 
+        if ( N =2) {
+            bl = true;
+            dpy = int + " nguyên tố đầu tiên là " + N;
+            N ++;
+        }
 
-
-        for(int = 1; int <= 19;) {
+        for(i = 1; i < int;) {
             for (a = 2; a < N; a++) {
                 if (N % a == 0) {
-                    b = false;
+                    bl = false;
                     break;
                 } else {
-                    b = true;
+                    bl = true;
                 }
 
-            }
+            } //Kết thúc vòng lặp for bên trong
 
-            if (b) {
-                e = e + " " + N;
-                int ++;
+            if (bl) {
+                dpy = dpy + " " + N;
+                i ++;
             }
             N += 2;
             a = 2;
 
         }
-            alert(e);
+            alert(dpy);
     </script>
 </body>
 </html>
