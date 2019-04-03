@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+
+        let int = 1;
+        let N = 3;
+        let a = 2;
+        let b = true;
+        let e = "20 nguyên tố đầu tiên là 2 ";
+
+
+
+        for(int = 1; int <= 19;) {
+            for (a = 2; a < N; a++) {
+                if (N % a == 0) {
+                    b = false;
+                    break;
+                } else {
+                    b = true;
+                }
+
+            }
+
+            if (b) {
+                e = e + " " + N;
+                int ++;
+            }
+            N += 2;
+            a = 2;
+
+        }
+            alert(e);
+    </script>
+</body>
+</html>
